@@ -16,4 +16,7 @@ Thumbs.db
 # Claude Code 개인 설정
 .claude/settings.local.json
 
-# 언어별 빌드 산출물(build/, node_modules/ 등)은 이 저장소 담당이 첫 코드를 만들 때 추가한다
+# Go 빌드 산출물 (go build -o bin/ ./cmd/...)
+/bin/
+*.test
+*.out

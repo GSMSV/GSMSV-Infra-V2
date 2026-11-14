@@ -17,3 +17,11 @@ GSMSV v2에서 Proxmox·Kubernetes를 다루는 실행 엔진(Go)이다. 아직 
 
 - 협업 규칙: [CONTRIBUTING](.github/CONTRIBUTING.md)
 - 보안 문제 신고: [SECURITY](.github/SECURITY.md)
+
+## 개발
+
+- Go 버전은 `go.mod`의 `go` 줄을 따른다
+- 실행: `GSMSV_INFRA_ADDR=127.0.0.1:8080 go run ./cmd/engine`
+- 검사: `gofmt -l .`, `go vet ./...`, `go test -race ./...`. PR마다 CI가 같은 검사를 돌린다
+- 빌드: `go build -o bin/ ./cmd/...`
+- 패키지마다 맡는 일은 `internal/` 아래 각 폴더의 `doc.go`에 적었다
